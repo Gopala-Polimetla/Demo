@@ -32,5 +32,12 @@ pipeline {
                 }
             }
         }
+        stage('Clean Up Local Image') {
+            steps {
+                script {
+                    sh "docker rmi ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
+                }
+            }
+        }
     }
 }
