@@ -5,12 +5,13 @@ pipeline {
         DOCKER_HUB_CREDENTIALS = 'docker-hub-credentials'
         DOCKER_IMAGE_NAME = 'gopalapolimetla/jenkinsdocker'
         DOCKER_IMAGE_TAG = "latest-${env.BUILD_NUMBER}"
+        GIT_URL = 'https://github.com/Gopala-Polimetla/Demo.git'
     }
     
     stages {
          stage('Checkout') {
             steps {
-                git url: 'https://github.com/Gopala-Polimetla/Demo.git'
+                git url: "${GIT_URL}"
             }
         }
         stage('Build Docker Image') {
