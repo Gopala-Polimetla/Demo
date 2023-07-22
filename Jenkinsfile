@@ -2,10 +2,10 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_HUB_CREDENTIALS = 'Dockerhub-ID'
+        DOCKER_HUB_CREDENTIALS = 'docker-hub-credentials'
         DOCKER_IMAGE_NAME = 'cibbi546/jenkinsdocker'
         DOCKER_IMAGE_TAG = "latest-${env.BUILD_NUMBER}"
-        GIT_URL = 'https://github.com/Cibbi546/Devops.git'
+        GIT_URL = 'https://github.com/Gopala-Polimetla/Demo.git'
     }
     
     stages {
